@@ -7,6 +7,7 @@ public class StringTest1 {
 		int a =5;
 		int b = 10;
 		System.out.println("Addition is : " + (a+b));
+		System.out.println("This is git test..");
 
 	}
 
