@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2917" started-at="2019-07-30T11:30:57Z" finished-at="2019-07-30T11:31:00Z">
+  <suite name="Default suite" duration-ms="5604" started-at="2019-08-19T06:19:51Z" finished-at="2019-08-19T06:19:57Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2917" started-at="2019-07-30T11:30:57Z" finished-at="2019-07-30T11:31:00Z">
+    <test name="Default test" duration-ms="5604" started-at="2019-08-19T06:19:51Z" finished-at="2019-08-19T06:19:57Z">
       <class name="headlessTest.Headless">
-        <test-method status="PASS" signature="Launch()[pri:0, instance:headlessTest.Headless@3a6f2de3]" name="Launch" duration-ms="2880" started-at="2019-07-30T11:30:57Z" finished-at="2019-07-30T11:31:00Z">
+        <test-method status="PASS" signature="Launch()[pri:0, instance:headlessTest.Headless@3a6f2de3]" name="Launch" duration-ms="5582" started-at="2019-08-19T06:19:51Z" finished-at="2019-08-19T06:19:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Launch -->
