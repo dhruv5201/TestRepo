@@ -25,7 +25,7 @@ public class DriverFactory {
 
 		if (driver == null) {
 
-			System.setProperty("webdriver.gecko.driver", "src/test/resources/geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver.exe");
 			driver = new FirefoxDriver();
 
 		}
@@ -36,7 +36,7 @@ public class DriverFactory {
 
 		if (driver == null) {
 
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
 			driver = new ChromeDriver();
 
 		}

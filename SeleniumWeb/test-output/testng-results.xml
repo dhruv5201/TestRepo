@@ -2,16 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5604" started-at="2019-08-19T06:19:51Z" finished-at="2019-08-19T06:19:57Z">
+  <suite name="Default suite" duration-ms="13506" started-at="2019-11-30T18:59:10Z" finished-at="2019-11-30T18:59:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5604" started-at="2019-08-19T06:19:51Z" finished-at="2019-08-19T06:19:57Z">
-      <class name="headlessTest.Headless">
-        <test-method status="PASS" signature="Launch()[pri:0, instance:headlessTest.Headless@3a6f2de3]" name="Launch" duration-ms="5582" started-at="2019-08-19T06:19:51Z" finished-at="2019-08-19T06:19:57Z">
+    <test name="Default test" duration-ms="13506" started-at="2019-11-30T18:59:10Z" finished-at="2019-11-30T18:59:24Z">
+      <class name="alteroAppTest.End2EndRegression">
+        <test-method status="PASS" signature="initiateDriver()[pri:0, instance:alteroAppTest.End2EndRegression@26a7b76d]" name="initiateDriver" is-config="true" duration-ms="10577" started-at="2019-11-30T18:59:10Z" finished-at="2019-11-30T18:59:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Launch -->
-      </class> <!-- headlessTest.Headless -->
+        </test-method> <!-- initiateDriver -->
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:alteroAppTest.End2EndRegression@26a7b76d]" name="LoginTest" duration-ms="1108" started-at="2019-11-30T18:59:21Z" finished-at="2019-11-30T18:59:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:alteroAppTest.End2EndRegression@26a7b76d]" name="closeBrowser" is-config="true" duration-ms="1781" started-at="2019-11-30T18:59:22Z" finished-at="2019-11-30T18:59:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- alteroAppTest.End2EndRegression -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
