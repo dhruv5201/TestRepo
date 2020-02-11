@@ -11,7 +11,7 @@ public class ListTest {
 		li.add("Banana");
 		li.add(null);
 		li.add(null);
-		li.add("Appale");
+		li.add("Apple");
 		displayList (li);
 		checkIfExist(li, "Banana");
 		

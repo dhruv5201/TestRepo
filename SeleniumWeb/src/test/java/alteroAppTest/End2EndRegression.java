@@ -20,6 +20,7 @@ public class End2EndRegression {
   @BeforeTest
   public void initiateDriver() {
 	  driver=DriverFactory.getFirefoxDriver();
+	 // driver=DriverFactory.GetHtmlUnitDriver();
 	  LoginPage = new LoginPO(driver);
 	  driver.get(PropertyReader.getProperty("url"));
   }

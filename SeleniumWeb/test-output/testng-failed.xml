@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="headlessTest.Headless">
+      <class name="alteroAppTest.End2EndRegression">
         <methods>
-          <include name="Launch"/>
+          <include name="initiateDriver"/>
+          <include name="LoginTest"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- headlessTest.Headless -->
+      </class> <!-- alteroAppTest.End2EndRegression -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

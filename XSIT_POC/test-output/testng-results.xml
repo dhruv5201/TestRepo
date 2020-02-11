@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="24716" started-at="2020-02-10T15:34:33 IST" finished-at="2020-02-10T15:34:57 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="24716" started-at="2020-02-10T15:34:33 IST" finished-at="2020-02-10T15:34:57 IST">
+      <class name="angularPOC.NavTest">
+        <test-method status="PASS" signature="LoadDriver()[pri:0, instance:angularPOC.NavTest@543e710e]" name="LoadDriver" is-config="true" duration-ms="11898" started-at="2020-02-10T15:34:33 IST" finished-at="2020-02-10T15:34:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoadDriver -->
+        <test-method status="PASS" signature="allTabNav()[pri:1, instance:angularPOC.NavTest@543e710e]" name="allTabNav" duration-ms="2009" started-at="2020-02-10T15:34:45 IST" finished-at="2020-02-10T15:34:47 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- allTabNav -->
+        <test-method status="PASS" signature="InventoryTest()[pri:2, instance:angularPOC.NavTest@543e710e]" name="InventoryTest" duration-ms="5136" started-at="2020-02-10T15:34:47 IST" finished-at="2020-02-10T15:34:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InventoryTest -->
+        <test-method status="PASS" signature="QualitiesTest()[pri:3, instance:angularPOC.NavTest@543e710e]" name="QualitiesTest" duration-ms="5622" started-at="2020-02-10T15:34:52 IST" finished-at="2020-02-10T15:34:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QualitiesTest -->
+      </class> <!-- angularPOC.NavTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
