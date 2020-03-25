@@ -9,7 +9,7 @@ import utilities.PropertyReader;
 import utilities.ScreenShotTaker;
 import utilities.Validator;
 
-public class LoginPO {
+public class InventoryPage {
 	WebDriver driver;
 	
 	@FindBy (xpath="//input[@id='uid']")
@@ -25,7 +25,7 @@ public class LoginPO {
 	public static WebElement loginText;
 	
 	
-	public LoginPO(WebDriver driver1){
+	public InventoryPage(WebDriver driver1){
 		this.driver=driver1;		
 		PageFactory.initElements(driver, this);
 	}

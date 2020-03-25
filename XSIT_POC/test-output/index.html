@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\dhrdas\AppData\Local\Temp\testng-eclipse-1193885466\testng-customsuite.xml</span>
+                    <span>C:\Users\dhrdas\AppData\Local\Temp\testng-eclipse-422864170\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,17 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="angularPOC.NavTest" hash-for-method="InventoryTest">InventoryTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="angularPOC.NavTest" hash-for-method="QualitiesTest">QualitiesTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="angularPOC.NavTest" hash-for-method="allTabNav">allTabNav</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="angularPOC.NavTest" hash-for-method="TestdataTest">TestdataTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -135,23 +125,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="InventoryTest">
-                  </a> <!-- InventoryTest -->
-                  <span class="method-name">InventoryTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="QualitiesTest">
-                  </a> <!-- QualitiesTest -->
-                  <span class="method-name">QualitiesTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="allTabNav">
-                  </a> <!-- allTabNav -->
-                  <span class="method-name">allTabNav</span>
+                  <a name="TestdataTest">
+                  </a> <!-- TestdataTest -->
+                  <span class="method-name">TestdataTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -159,7 +135,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\dhrdas\AppData\Local\Temp\testng-eclipse-1193885466\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\dhrdas\AppData\Local\Temp\testng-eclipse-422864170\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -208,24 +184,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'QualitiesTest')
+data.setCell(0, 1, 'TestdataTest')
 data.setCell(0, 2, 'angularPOC.NavTest')
-data.setCell(0, 3, 5622);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'InventoryTest')
-data.setCell(1, 2, 'angularPOC.NavTest')
-data.setCell(1, 3, 5136);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'allTabNav')
-data.setCell(2, 2, 'angularPOC.NavTest')
-data.setCell(2, 3, 2009);
+data.setCell(0, 3, 17);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 17 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -240,9 +208,20 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">angularPOC.NavTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">QualitiesTest</span>
+                <br/>
+                <span class="ignored-method-name">InventoryTest</span>
+                <br/>
+                <span class="ignored-method-name">allTabNav</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -257,17 +236,13 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">allTabNav</span>
-                <span class="method-start">11928 ms</span>
+                <span class="method-name">TestdataTest</span>
+                <span class="method-start">8818 ms</span>
               </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">InventoryTest</span>
-                <span class="method-start">13945 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">QualitiesTest</span>
-                <span class="method-start">19083 ms</span>
-              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">CloseBrowser</span>
+                <span class="method-start">8843 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

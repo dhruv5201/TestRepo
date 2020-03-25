@@ -6,7 +6,8 @@
       <class name="angularPOC.NavTest">
         <methods>
           <include name="LoadDriver"/>
-          <include name="InventoryTest"/>
+          <include name="CloseBrowser"/>
+          <include name="TestdataTest"/>
         </methods>
       </class> <!-- angularPOC.NavTest -->
     </classes>

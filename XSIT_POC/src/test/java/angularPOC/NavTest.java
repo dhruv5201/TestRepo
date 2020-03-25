@@ -1,7 +1,13 @@
 package angularPOC;
 
+import static org.testng.Assert.ARRAY_MISMATCH_TEMPLATE;
+
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -10,21 +16,27 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.paulhammant.ngwebdriver.ByAngular;
 import com.paulhammant.ngwebdriver.ByAngularButtonText;
 import com.paulhammant.ngwebdriver.NgWebDriver;
+import com.xsit.base.TestBase;
+import com.xsit.testdata.JsonDataReader;
+import com.xsit.testdata.TestData;
 
 import utilities.DriverFactory;
 import utilities.PropertyReader;
 
-public class NavTest {
-	WebDriver driver;
-	NgWebDriver NGDriver;
-
-	@Test(enabled = true, priority = 1)
+public class NavTest extends TestBase{
+	//WebDriver driver;
+	//NgWebDriver NGDriver;
+	
+	@Test(enabled = false, priority = 1)
 	public void allTabNav() {
 		// driver.get("http://localhost:4200/");
 		// driver.manage().window().maximize();
@@ -34,10 +46,12 @@ public class NavTest {
 		driver.findElement(ByAngular.buttonText("Rundowns")).click();
 		driver.findElement(ByAngular.buttonText("Qualities")).click();
 		driver.findElement(ByAngular.buttonText("Inventory")).click();
+		
+		
 
 	}
 
-	@Test(enabled = true, priority = 2)
+	@Test(enabled = false, priority = 2)
 	public void InventoryTest() throws InterruptedException {
 		driver.findElement(ByAngular.buttonText("Inventory")).click();
 		// SELECTING A FILTER ****************************************
@@ -150,10 +164,11 @@ public class NavTest {
 
 	}
 
-	@Test(enabled = true, priority = 3)
+	@Test(enabled = false, priority = 3)
 	public void QualitiesTest() {
 		driver.findElement(ByAngular.buttonText("Qualities")).click();
 		Actions action = new Actions(driver);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// EXPAND FCCB COLUMN
 		WebElement colHeaderFCCB = driver.findElement(By.xpath("//span[contains(text(),'FCCB')]"));
 		action.doubleClick(colHeaderFCCB).perform();
@@ -174,6 +189,7 @@ public class NavTest {
 
 		// Getting RowCounts
 		WebElement Table = driver.findElement(By.xpath("(//*[ag-grid-angular])[1]"));
+		
 		// String rowCountTable=Table.findElement(By.xpath("(//div[@class='ag-root
 		// ag-unselectable ag-layout-auto-height' and
 		// @ref='gridPanel'])[1]")).getAttribute("aria-rowcount");
@@ -204,13 +220,40 @@ public class NavTest {
 
 	@BeforeTest
 	public void LoadDriver() {
-		// driver=DriverFactory.getChromeDriver();
+		System.out.println("Inside - BeforeTest");
+		/*
+		driver=DriverFactory.getChromeDriver();
 		driver = DriverFactory.GetEdgeDriver();
 		NgWebDriver NGDriver = new NgWebDriver((JavascriptExecutor) driver);
 		NGDriver.waitForAngularRequestsToFinish();
 		driver.get("http://localhost:4200/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+		*/
+		initializeTestBase();
+		
+		
+	}
+	@AfterTest
+	public void CloseBrowser() {
+		System.out.println("Inside AfterTest.");
+		driver.close();
+		
+	}
+	@Test (enabled = true, priority = 3)
+	public void TestdataTest() throws JsonParseException, JsonMappingException, IOException {
+		JsonDataReader td=new JsonDataReader();
+		System.out.println("***" + data.getTestData().getAddress() );
+		
+		
+		TestData data1 = td.getTestData();
+		data1.getLastname();
+		System.out.println(data1.getLastname());
+		HashMap<String, String> map= (HashMap<String, String>) td.getJsonDataInMaps();
+		System.out.println("PHONE NUMBERS: "+ map.get("phoneNumbers"));
+		//ArrayList <String> i=map.get("phoneNumbers");
+		
+		
+		
 	}
 }
