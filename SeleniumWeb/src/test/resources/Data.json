@@ -1,0 +1,16 @@
+{
+  "login":
+	  {
+	  	"userid":"Admin",
+	  	"password":"Admin"
+	  	
+	  		  			   
+	  },
+  "accounts":
+	  {
+	  	"account1":"800000",
+		"account2":"800001"
+	  }
+	  
+  
+}
