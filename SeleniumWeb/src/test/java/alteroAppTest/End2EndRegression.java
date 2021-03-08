@@ -1,43 +1,48 @@
 package alteroAppTest;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import baseClass.TestBase;
+import testCaseLibrary.Home_TestCases;
+import testCaseLibrary.Login_TestCases;
+import utilities.DBReader;
+import utilities.ReportGenerator;
 
-import pageObjects.LoginPO;
-import utilities.DriverFactory;
-import utilities.PropertyReader;
-
-public class End2EndRegression {
+public class End2EndRegression extends TestBase{
 	
-  WebDriver driver;
-  LoginPO LoginPage;
-  
   
   @BeforeTest
   public void initiateDriver() {
-	  driver=DriverFactory.getFirefoxDriver();
-	 // driver=DriverFactory.GetHtmlUnitDriver();
-	  LoginPage = new LoginPO(driver);
-	  driver.get(PropertyReader.getProperty("url"));
+	  
+	  InitiateTestBase();
   }
   
-  @Test
+  @Test (priority = 1)
   public void LoginTest() {
-	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	  LoginPage.validLoginTest();
-	  
-	  
-	  
-	  
+	  Logger = extentReport.createTest("Login Case");
+	  boolean IsPass = Login_TestCases.login();
+	  Assert.assertTrue(IsPass);
+	 // DBReader.MongoReader();
+  	  
+  }
+  @Test (priority = 2)
+  public void SelectAccountTest() {
+	  Logger = extentReport.createTest("Select Account Case");
+	  boolean IsPass = Home_TestCases.SelectAccount();
+	  Assert.assertTrue(IsPass);
+  }
+  @AfterMethod
+  public void GetResult(ITestResult results) {
+	  ReportGenerator.LogResult(results, Logger);
 	  
   }
-  
   @AfterTest
   public void closeBrowser() {
+	  extentReport.flush();
 	  driver.quit();
   }
 }

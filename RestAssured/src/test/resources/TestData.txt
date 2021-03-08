@@ -1,0 +1,10 @@
+{
+  "id": 123,
+  "name": "Pankaj",
+  "lastname": "Mahesh Kumar",
+  "address": "C3 , New Delhi-110058",
+  "phoneNumbers": [123456,987654],
+  "url": "http://localhost:4200/inventory",
+  "cities": ["Los Angeles","New York"],
+  "tank": ["TK114","Tk778"]
+}

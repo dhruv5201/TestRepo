@@ -2,6 +2,7 @@ package utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -42,6 +43,22 @@ public class DriverFactory {
 
 		}
 	}
+	
+	
+	private static void ChromeDriverDebug() {
+		// prop = new PropertyUtils();
+
+		if (driver == null) {
+
+			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+			ChromeOptions options= new ChromeOptions();
+			options.setExperimentalOption("debuggerAddress", "localhost:8074");
+			driver = new ChromeDriver(options);
+
+		}
+	}
+	
+	
 	private static void EdgeDriver() {
 		// prop = new PropertyUtils();
 
@@ -83,7 +100,13 @@ public class DriverFactory {
 		}
 		return driver;
 	}
+	public static WebDriver getChromeDriverDebug() {
 
+		if (driver == null) {
+			ChromeDriverDebug();
+		}
+		return driver;
+	}
 	public static WebDriver GetHtmlUnitDriver() {
 
 		if (driver == null) {

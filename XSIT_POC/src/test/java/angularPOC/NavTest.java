@@ -36,17 +36,18 @@ public class NavTest extends TestBase{
 	//WebDriver driver;
 	//NgWebDriver NGDriver;
 	
-	@Test(enabled = false, priority = 1)
+	@Test(enabled = true, priority = 1)
 	public void allTabNav() {
 		// driver.get("http://localhost:4200/");
 		// driver.manage().window().maximize();
-		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		System.out.println("INSIDE AllTabNav");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(ByAngular.buttonText("Pricing")).click();
 		driver.findElement(ByAngular.buttonText("Lifts & Deliveries")).click();
 		driver.findElement(ByAngular.buttonText("Rundowns")).click();
 		driver.findElement(ByAngular.buttonText("Qualities")).click();
 		driver.findElement(ByAngular.buttonText("Inventory")).click();
-		
+		System.out.println("Executed AllTabNav");
 		
 
 	}
@@ -237,13 +238,14 @@ public class NavTest extends TestBase{
 	@AfterTest
 	public void CloseBrowser() {
 		System.out.println("Inside AfterTest.");
-		driver.close();
+		//driver.close();
 		
 	}
-	@Test (enabled = true, priority = 3)
+	@Test (enabled = false, priority = 3)
 	public void TestdataTest() throws JsonParseException, JsonMappingException, IOException {
 		JsonDataReader td=new JsonDataReader();
-		System.out.println("***" + data.getTestData().getAddress() );
+		//System.out.println("***" + data.getTestData().getAddress() );
+		
 		
 		
 		TestData data1 = td.getTestData();

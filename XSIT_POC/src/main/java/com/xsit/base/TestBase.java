@@ -9,6 +9,8 @@ import com.paulhammant.ngwebdriver.NgWebDriver;
 import com.xsit.testdata.JsonDataReader;
 import com.xsit.testdata.TestData;
 
+import pageObjects.InventoryPageOR;
+import utilities.DataReader;
 import utilities.DriverFactory;
 import utilities.PropertyReader;
 
@@ -16,13 +18,22 @@ public class TestBase {
 	
 	public static WebDriver driver;
 	public static NgWebDriver ngWebDriver;
-	public static JsonDataReader data;
+	public static DataReader data;
+	public static InventoryPageOR InventoryRepo;
+	
+	
 	
 	public void initializeTestBase() {
 		intilizeDriver();
-		initilizeBrowser();
-		loadURL();
+		//initilizeBrowser();
+		//loadURL();
 		initializeTestData();
+		intializeObjectRepo();
+		
+	}
+	
+	private void intializeObjectRepo() {
+		InventoryRepo= new InventoryPageOR(driver);
 		
 	}
 	
@@ -31,12 +42,13 @@ public class TestBase {
 		
 		if (browser.equalsIgnoreCase("chrome")) {
 			driver=DriverFactory.getChromeDriver();
+			//driver=DriverFactory.getChromeDriverDebug();
 		}else 
 			if (browser.equalsIgnoreCase("edge")) {
 			driver=DriverFactory.getChromeDriver();
 		}
-		ngWebDriver = new NgWebDriver((JavascriptExecutor) driver);
-		ngWebDriver.waitForAngularRequestsToFinish();
+		//ngWebDriver = new NgWebDriver((JavascriptExecutor) driver);
+		//ngWebDriver.waitForAngularRequestsToFinish();
 		
 	}
 	
@@ -44,7 +56,7 @@ public class TestBase {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.manage().deleteAllCookies();
+		//driver.manage().deleteAllCookies();
 		
 	}
 	
@@ -54,7 +66,7 @@ public class TestBase {
 	}
 	
 	private void initializeTestData() {
-		data =new JsonDataReader();
+		data =new DataReader();
 		
 	}
 

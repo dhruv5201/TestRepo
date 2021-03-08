@@ -1,0 +1,21 @@
+{
+  "inventory":
+	  {
+	  	"physicaltank":"TK311",
+	  	"mbotank":"310",
+	  	"material":"SUBA2",
+	  	"virtualtank":"TLITFCC",
+	  	"groupby":{ "physicaltank" : "Physical Tank" , 
+	  				"material" : "Material" , 
+	  				"products": "Products & Components" , 
+	  				"virtualtank":"Virtual Tank" 
+	  			  }
+	  			   
+	  },
+  "qualities":
+	  {
+	  	"TestData1": "Test" 
+	  }
+	  
+  
+}

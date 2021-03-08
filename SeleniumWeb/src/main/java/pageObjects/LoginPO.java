@@ -1,16 +1,14 @@
 package pageObjects;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import utilities.PropertyReader;
-import utilities.ScreenShotTaker;
-import utilities.Validator;
+import baseClass.TestBase;
+import utilities.WebElementFactory;
 
-public class LoginPO {
-	WebDriver driver;
+public class LoginPO extends TestBase{
+	
 	
 	@FindBy (xpath="//input[@id='uid']")
 	public WebElement userIDinput;
@@ -22,28 +20,28 @@ public class LoginPO {
 	public WebElement submitButton;
 	
 	@FindBy (xpath="//a[@id='LoginLink']")
-	public static WebElement loginText;
-	
-	
-	public LoginPO(WebDriver driver1){
-		this.driver=driver1;		
+	public WebElement loginText;
+			
+	@FindBy (xpath="//h1[contains(text(),'Online Banking Login')]")
+	public WebElement HeaderText;
+	//Online Banking Login
+	public LoginPO(){
+			
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void validLoginTest() {
-		//System.out.println(Validator.ValidateText(loginText.getText(), "Sign Off"));
-		userIDinput.sendKeys(PropertyReader.getProperty("userid"));
-		passwordInput.sendKeys(PropertyReader.getProperty("password"));
-		submitButton.click();
-		boolean isMatched=Validator.ValidateText(loginText.getText(), "Sign Off");
-		if (isMatched) {
-			System.out.println("Valid Login Case PASS. "+ Validator.TextValivationMessage);
-			ScreenShotTaker.takeScreenShot(driver);
+	
+	
+	//***************************** UTILITY ACTIONS******************************************
+	public boolean IsLoginPageLoaded() {
+		boolean IsPass = false;
+		if (WebElementFactory.IfElementExist(driver, HeaderText)) {
+			IsPass = true;
 		}
-		else {
-			System.out.println("Valid Login Case FAIL. " + Validator.TextValivationMessage);
-		}
-		
+		return IsPass;
 	}
+	
+	//***************************************************************************************
+	
 
 }
