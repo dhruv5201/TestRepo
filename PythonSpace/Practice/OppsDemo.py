@@ -16,7 +16,14 @@ class Calculator:
         print("Summation Result is: {} ".format(result))
 
 
-obj = Calculator(10, 20)
+class Animal:
+    def eat(self):
+        print("Animal can Eat")
 
-obj.getdata()
-obj.summation()
+    def move(self):
+        print("Animal Can Move")
+
+# obj = Calculator(10, 20)
+
+# obj.getdata()
+# obj.summation()
